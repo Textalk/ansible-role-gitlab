@@ -31,3 +31,8 @@ gitlab_omniauth_enabled: "false"
 gitlab_allow_single_sign_on: "false"
 gitlab_block_auto_created_users: "true"
 gitlab_omniauth_providers: "[]"
+
+# GitLab CI configuration
+gitlab_ci_standalone: False
+gitlab_ci_ssl_certificate: {{ gitlab_ssl_certificate }}
+gitlab_ci_ssl_certificate_key: {{ gitlab_ssl_certificate_key }}
