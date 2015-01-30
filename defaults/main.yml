@@ -34,5 +34,5 @@ gitlab_omniauth_providers: "[]"
 
 # GitLab CI configuration
 gitlab_ci_standalone: False
-gitlab_ci_ssl_certificate: {{ gitlab_ssl_certificate }}
-gitlab_ci_ssl_certificate_key: {{ gitlab_ssl_certificate_key }}
+gitlab_ci_ssl_certificate: "{{ gitlab_ssl_certificate }}"
+gitlab_ci_ssl_certificate_key: "{{ gitlab_ssl_certificate_key }}"
