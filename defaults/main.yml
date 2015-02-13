@@ -36,3 +36,7 @@ gitlab_omniauth_providers: "[]"
 gitlab_ci_standalone: False
 gitlab_ci_ssl_certificate: "{{ gitlab_ssl_certificate }}"
 gitlab_ci_ssl_certificate_key: "{{ gitlab_ssl_certificate_key }}"
+
+# Create cronjob for gitlab backup
+gitlab_create_backup_job: False
+gitlab_create_backup_hour: 1

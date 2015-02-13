@@ -81,3 +81,11 @@
     dest=/etc/gitlab/gitlab.rb
     owner=root group=root mode=600
   notify: restart gitlab
+
+## Add backup of gitlab to a cronjob if the setting is set to true.
+- name: Add a cronjob for backup
+  cron: name="Create backup of gitlab data and config"
+        hour="{{ gitlab_create_backup_hour }}""
+        user=root
+        job="gitlab-rake gitlab:backup:create"
+  when: gitlab_create_backup_job
